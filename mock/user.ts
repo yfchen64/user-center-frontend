@@ -20,7 +20,7 @@ const { ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION } = process.env;
  * current user access， if is '', user need login
  * 如果是 pro 的预览，默认是有权限的
  */
-let access = ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION === 'site' ? 'admin' : '';
+let access = ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION === 'site' ? 'Admin' : '';
 
 const getAccess = () => {
   return access;
@@ -120,13 +120,13 @@ export default {
   'POST /api/login/account': async (req: Request, res: Response) => {
     const { userPassword, userAccount, type } = req.body;
     await waitTime(2000);
-    if (userPassword === 'ant.design' && userAccount === 'admin') {
+    if (userPassword === 'ant.design' && userAccount === 'Admin') {
       res.send({
         status: 'ok',
         type,
-        currentAuthority: 'admin',
+        currentAuthority: 'Admin',
       });
-      access = 'admin';
+      access = 'Admin';
       return;
     }
     if (userPassword === 'ant.design' && userAccount === 'user') {
@@ -142,9 +142,9 @@ export default {
       res.send({
         status: 'ok',
         type,
-        currentAuthority: 'admin',
+        currentAuthority: 'Admin',
       });
-      access = 'admin';
+      access = 'Admin';
       return;
     }
 
