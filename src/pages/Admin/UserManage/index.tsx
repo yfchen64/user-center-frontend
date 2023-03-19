@@ -34,6 +34,7 @@ const columns: ProColumns<API.CurrentUser>[] = [
     ),
 
   },
+
   {
     title: '性别',
     dataIndex: 'gender',
@@ -48,6 +49,10 @@ const columns: ProColumns<API.CurrentUser>[] = [
     title: '邮箱',
     dataIndex: 'email',
     copyable:true
+  },
+  {
+    title:'星球编号',
+    dataIndex:'planetCode'
   },
   {
     title: '用户身份',

@@ -14,7 +14,6 @@ import React, { useState } from 'react';
 import { history, useModel } from 'umi';
 import styles from './index.less';
 import {PLANET_LINK, SYSTEM_LOGO} from "@/constants";
-import {Bullet} from "@ant-design/charts";
 const LoginMessage: React.FC<{
   content: string;
 }> = ({ content }) => (

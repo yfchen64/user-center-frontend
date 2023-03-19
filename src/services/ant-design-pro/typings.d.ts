@@ -11,6 +11,7 @@ declare namespace API {
     phone:string;
     email:string;
     userRole:number;
+    planetCode:string;
     createTime:Date;
   };
 
@@ -48,6 +49,15 @@ declare namespace API {
     total?: number;
     success?: boolean;
   };
+  /**
+   * 通用返回类
+   */
+  type BaseResponse<T> = {
+    code:number;
+    data:T;
+    message:string;
+    description:string;
+  }
 
   type FakeCaptcha = {
     code?: number;
@@ -64,6 +74,7 @@ declare namespace API {
     userAccount?: string;
     userPassword?: string;
     checkPassword?:string;
+    planetCOde?:string;
     type?: string;
   };
 
